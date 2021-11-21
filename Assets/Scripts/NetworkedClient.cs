@@ -49,7 +49,7 @@ public class NetworkedClient : MonoBehaviour
                     break;
                 case NetworkEventType.DataEvent:
                     string msg = Encoding.Unicode.GetString(recBuffer, 0, dataSize);
-                    NetworkedClientProcessing.ReceivedMessageFromServer(msg, recConnectionID);
+                    NetworkedClientProcessing.ReceivedMessageFromServer(msg);
                     break;
                 case NetworkEventType.DisconnectEvent:
                     isConnected = false;
